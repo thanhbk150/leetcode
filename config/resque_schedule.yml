@@ -1,0 +1,8 @@
+# start resque_schedule: rake environment resque:scheduler
+DemoWorker:
+  queue: 'normal'
+  cron: '*/5 * * * * UTC'
+
+ResizeImageWorker:
+  queue: 'normal'
+  cron: '* * * * * UTC'

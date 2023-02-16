@@ -17,6 +17,14 @@ Things you may want to cover:
 
 * How to run the test suite
 
+# End-to-End
+  brew install --cask chromedriver
+
+  VISIBLE_CHROME=true bundle exec cucumber features/dashboard.feature
+
+# Unit
+  rails test test/model
+
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions

@@ -5,11 +5,27 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application"  %>
   </head>
-
   <body>
-    <%= yield %>
+    <!-- Header -->
+    <%= render "layouts/header" %>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- menu -->
+        <%= render "layouts/sidebar_menu" %>
+        <!-- Main -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <div class="row">
+            <div class="col-md-12">
+              <p style="color:green;display:<%= notice ? 'block' : 'none' %>;"><%= notice %></p>
+              <p style="color: red;display:<%= flash[:error] ? 'block' : 'none' %>;"><%= flash[:error] %></p>
+            </div>
+          </div>
+          <%= yield %>
+        </main>
+      </div>
+    </div>
   </body>
 </html>

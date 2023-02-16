@@ -1,0 +1,6 @@
+# bundle exec foreman s -f Procfile.dev
+web: LOG_LEVEL=warn bundle exec puma -C config/puma.rb
+worker: QUEUE=normal,low,high,top bundle exec rake environment resque:work
+scheduler: DYNAMIC_SCHEDULE=true bundle exec rake environment resque:scheduler
+frontend: bin/webpack-dev-server
+#solr: bundle exec rake environment sunspot:solr:start

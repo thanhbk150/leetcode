@@ -1,0 +1,22 @@
+require: rubocop-rails
+
+inherit_from:
+  - .rubocop_enabled.yml
+  - .rubocop_disabled.yml
+  - .rubocop_todo.yml
+
+AllCops:
+  TargetRubyVersion: 3.0.5
+  TargetRailsVersion: 7.0.4
+  NewCops: enable
+  Exclude:
+    - 'bin/*'
+    - 'db/schema.rb'
+    - 'db/migrate/*'
+    - 'lib/tasks/cucumber.rake'
+    - 'node_modules/**/*'
+    - 'script/algorithm/*'
+    - 'test/capybara_helper.rb'
+    - 'vendor/**/*'
+    - 'config/initializers/constant.rb'
+    - 'app/services/application_service.rb'
