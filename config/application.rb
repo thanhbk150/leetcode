@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative "boot"
 
 require "rails/all"
@@ -18,5 +20,15 @@ module Leetcode
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Redis
+    config.cache_store = :redis_store, {
+      host: "localhost",
+      port: 6379,
+      db: 0
+    }, { expires_in: 7.days }
+
+    # FactoryBot
+    config.factory_bot.definition_file_paths = ['factories']
   end
 end

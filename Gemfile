@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.0.5"
+ruby File.read("#{__dir__}/.ruby-version").strip
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.2"
@@ -28,7 +28,10 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
-# gem "redis", "~> 4.0"
+gem "redis"
+gem "redis-namespace"
+gem "redis-rack-cache"
+gem "redis-rails"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -37,7 +40,7 @@ gem "jbuilder"
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -48,9 +51,56 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem "devise"
+
+gem 'bootstrap', '~> 5.2', '>= 5.2.3'
+gem "font-awesome-sass", "~> 6.3.0"
+gem 'jquery-rails', '~> 4.4'
+
+gem 'kaminari'
+
+gem 'resque'
+gem 'resque-scheduler'
+
+gem "airbrake"
+gem "airbrake-ruby"
+gem 'retryable'
+
+gem 'foreman'
+
+gem 'webpacker'
+
+gem 'jwt'
+
+# gem 'grape'
+gem 'active_model_serializers'
+
+gem "activerecord-import"
+
+gem 'sitemap_generator'
+
+gem 'progress_bar'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+
+gem 'base62'
+
+gem 'slack-notifier'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "debug", platforms: %i[mri mingw x64_mingw]
+  gem 'factory_bot_rails'
+
+  gem 'cucumber-rails', require: false
+  gem 'faker'
+
+  gem 'database_cleaner'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+
+  gem 'rubocop-rails', require: false
 end
 
 group :development do
@@ -62,6 +112,8 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  gem 'byebug'
 end
 
 group :test do
@@ -69,4 +121,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+
+  gem 'rack_session_access'
+
+  gem "webmock", require: false
 end

@@ -1,0 +1,243 @@
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Lint/RedundantSplatExpansion:
+  Enabled: true
+
+Lint/RedundantDirGlobSort:
+  Enabled: true
+
+Lint/NumberedParameterAssignment:
+  Enabled: true
+
+Lint/NoReturnInBeginEndBlocks:
+  Enabled: true
+
+Lint/LambdaWithoutLiteralBlock:
+  Enabled: true
+
+Lint/EmptyClass:
+  Enabled: true
+
+Lint/DuplicateRegexpCharacterClassElement:
+  Enabled: true
+
+Lint/DeprecatedConstants:
+  Enabled: true
+
+Lint/AmbiguousAssignment:
+  Enabled: true
+
+Lint/UnmodifiedReduceAccumulator:
+  Enabled: true
+
+Lint/UnexpectedBlockArity:
+  Enabled: true
+  Exclude:
+    - 'factories/factories.rb'
+
+Lint/TripleQuotes:
+  Enabled: true
+
+Lint/ToEnumArguments:
+  Enabled: true
+
+Lint/SymbolConversion:
+  Enabled: true
+
+Lint/DuplicateBranch:
+  Enabled: true
+
+Lint/EmptyBlock:
+  Enabled: true
+
+Lint/OrAssignmentToConstant:
+  Enabled: true
+
+Lint/EmptyInPattern:
+  Enabled: true
+
+Lint/AmbiguousOperatorPrecedence:
+  Enabled: true
+
+Lint/AmbiguousRange:
+  Enabled: true
+
+Lint/IncompatibleIoSelectWithFiberScheduler:
+  Enabled: true
+
+Lint/RequireRelativeSelfPath:
+  Enabled: true
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
+Layout/SpaceBeforeBrackets:
+  Enabled: true
+
+Layout/LineEndStringConcatenationIndentation:
+  Enabled: true
+
+Rails:
+  Enabled: true
+
+Rails/WhereNot:
+  Enabled: true
+
+Rails/WhereExists:
+  Enabled: true
+
+Rails/WhereEquals:
+  Enabled: true
+
+Rails/SquishedSQLHeredocs:
+  Enabled: true
+
+Rails/ShortI18n:
+  Enabled: true
+
+Rails/RenderPlainText:
+  Enabled: true
+
+Rails/RenderInline:
+  Enabled: true
+
+Rails/PluckInWhere:
+  Enabled: true
+
+Rails/MailerName:
+  Enabled: true
+
+Rails/Inquiry:
+  Enabled: true
+
+Rails/FindById:
+  Enabled: true
+
+Rails/AttributeDefaultBlockValue:
+  Enabled: true
+
+Rails/AfterCommitOverride:
+  Enabled: true
+
+Rails/Pluck:
+  Enabled: true
+
+Rails/NegateInclude:
+  Enabled: true
+
+Rails/MatchRoute:
+  Enabled: true
+
+Rails/ActiveRecordCallbacksOrder:
+  Enabled: true
+
+Rails/TimeZoneAssignment:
+  Enabled: true
+  Exclude:
+    - 'test/**/*'
+
+Rails/RedundantTravelBack:
+  Enabled: true
+
+Rails/I18nLocaleAssignment:
+  Enabled: true
+  Exclude:
+    - 'test/**/*'
+
+Security/IoMethods:
+  Enabled: true
+
+Style/HashSyntax:
+  Enabled: true
+  EnforcedStyle: 'ruby19_no_mixed_keys'
+  Exclude:
+    - 'features/**/*'
+    - 'test/**/*'
+
+Style/SwapValues:
+  Enabled: true
+
+Style/NilLambda:
+  Enabled: true
+
+Style/HashExcept:
+  Enabled: true
+
+Style/EndlessMethod:
+  Enabled: true
+
+Style/DocumentDynamicEvalDefinition:
+  Enabled: true
+
+Style/CollectionCompact:
+  Enabled: true
+
+Style/ArgumentsForwarding:
+  Enabled: true
+
+Style/RedundantArgument:
+  Enabled: true
+
+Style/NegatedIfElseCondition:
+  Enabled: true
+
+Style/IfWithBooleanLiteralBranches:
+  Enabled: true
+
+Style/StringChars:
+  Enabled: true
+
+Style/HashConversion:
+  Enabled: true
+
+Style/InPatternThen:
+  Enabled: true
+
+Style/MultilineInPatternThen:
+  Enabled: true
+
+Style/SelectByRegexp:
+  Enabled: true
+
+Style/RedundantSelfAssignmentBranch:
+  Enabled: true
+
+Style/NumberedParametersLimit:
+  Enabled: true
+
+Style/NumberedParameters:
+  Enabled: true
+
+Style/FileRead:
+  Enabled: true
+
+Style/FileWrite:
+  Enabled: true
+
+Rails/UnusedIgnoredColumns:
+  Enabled: true
+
+Rails/AddColumnIndex:
+  Enabled: true
+
+Rails/ExpandedDateRange:
+  Enabled: true
+
+Rails/EagerEvaluationLogMessage:
+  Enabled: true
+
+Gemspec/DeprecatedAttributeAssignment:
+  Enabled: true
+
+Rails/DeprecatedActiveModelErrorsMethods:
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  Exclude:
+    - 'script/*'
+    - 'Gemfile'

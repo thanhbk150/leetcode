@@ -1,0 +1,31 @@
+<%= form_with(model: user, class: 'user', html: { autocomplete: "off" }) do |form| %>
+  <div class="mb-3">
+    <%= form.label :first_name, class: 'form-label' %>
+    <%= form.text_field :first_name, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :last_name, class: 'form-label' %>
+    <%= form.text_field :last_name, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :login, class: 'form-label' %>
+    <%= form.text_field :login, class: "form-control #{'is-invalid' if user.errors.key?(:login)}" %>
+    <div class="invalid-feedback d-block"><%= user.errors[:login].join(", ") if user.errors.key?(:login) %></div>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :email, class: 'form-label' %>
+    <%= form.text_field :email, class: "form-control #{'is-invalid' if user.errors.key?(:email)}" %>
+    <div class="invalid-feedback d-block"><%= user.errors[:email].join(", ") if user.errors.key?(:email) %></div>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :password, class: 'form-label' %>
+    <%= form.password_field :password, class: "form-control #{'is-invalid' if user.errors.key?(:password)}" %>
+    <div class="invalid-feedback d-block"><%= user.errors[:password].join(", ") if user.errors.key?(:password) %></div>
+  </div>
+
+  <%= form.submit 'Save', class: 'btn btn-primary btn-sm btn-save' %>
+<% end %>
